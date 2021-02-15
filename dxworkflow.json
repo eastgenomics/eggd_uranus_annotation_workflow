@@ -1,0 +1,30 @@
+{
+  "name": "uranus_annotation_workflow_GRCh38_v1.0.0",
+  "title": "uranus_annotation_workflow_GRCh38_v1.0.0",
+  "stages": [
+    {
+      "id": "stage-G0QQ8jj433Gxyx2K8xfPyV7B",
+      "executable": "applet-G0Gbx7Q4x19zQ8J4K19yBzxp",
+      "folder": "nirvana_v2.1.0"
+    },
+    {
+      "id": "stage-G0QQ8q8433Gb8YFG4q7847Px",
+      "executable": "applet-Fpx49F8433GY69qV8PGxFG0F",
+      "folder": "nirvana2vcf_v1.1.0",
+      "input": {
+        "json_file": {
+          "$dnanexus_link": {
+            "outputField": "output_json",
+            "stage": "stage-G0QQ8jj433Gxyx2K8xfPyV7B"
+          }
+        },
+        "vcf_file": {
+          "$dnanexus_link": {
+            "inputField": "input_vcf",
+            "stage": "stage-G0QQ8jj433Gxyx2K8xfPyV7B"
+          }
+        }
+      }
+    }
+  ]
+}
